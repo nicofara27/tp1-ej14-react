@@ -1,6 +1,20 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { consultarRecetasApi } from "../helpers/queries";
+import RecetaAdmin from "../RecetaAdmin";
 
 const Administrador = () => {
+  let [recetas, setRecetas] = useState([]);
+  console.log(recetas)
+  useEffect(() => {
+    consultarRecetasApi().then(
+      (respuesta)=>{
+        setRecetas(respuesta);
+      }
+    )
+  }, [])
+  
+
   return (
     <section className="administradorContainer">
       <div>
@@ -25,23 +39,8 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>Cod</th>
-              <th>Producto</th>
-              <th>Precio</th>
-              <th>URL de Imagen</th>
-              <th>Categoria</th>
-              <th>Opciones</th>
-            </tr>
-            {/* aqui tengo que hacer un map  */}
-            {
-              // opcion 1
-              // productos.map((producto)=> {return <ItemProducto key={producto.id} producto={producto}></ItemProducto>} )
-              // opcion 2
-              // productos.map((producto)=> <ItemProducto key={producto.id} {...producto}></ItemProducto> )
-              // opcion 3
-              // productos.map((producto)=> <ItemProducto key={producto.id} producto={producto} setProductos={setProductos}></ItemProducto> )
-            }
+          { recetas.map((receta)=> <RecetaAdmin key={receta.id} receta={receta} setRecetas={setRecetas}></RecetaAdmin> )
+          }
           </tbody>
         </table>
       </div>

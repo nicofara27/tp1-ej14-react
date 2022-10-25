@@ -96,9 +96,10 @@ table {
   min-width: 90%;
   background: #e3f6f5;
 }
-table, th {
+table, th, td {
   border: 1px solid #272343;
   border-collapse: collapse;
+  padding: 5px;
 }
 th {
   padding: .5rem;
@@ -106,6 +107,32 @@ th {
 tbody th {
   text-align: start;
   font-weight: lighter;
+}
+td {
+  text-overflow: ellipsis;
+  overflow: hidden; 
+}
+td:last-child div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btnEditar {
+  padding: 10px 10px;
+  background:#e8dfba;
+  border-radius: 20px;
+  border: none;
+  color: #272343;
+  text-decoration: none;
+}
+.btnBorrar {
+  padding: 10px 10px;
+  background: #a2829a;
+  border-radius: 20px;
+  border: none;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 /* Pagina subir receta */
