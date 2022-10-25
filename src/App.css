@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background: #fffffe;
+}
+
+/* Navbar */
+#header {
+  background: #e3f6f5;
+  border-bottom: 2px solid gray;
+  padding: 1rem 0;
+  list-style: none;
+  display: flex; 
+}
+#header a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 7rem;
+}
+
+/* Main */
+main {
+  margin: 0 3rem;
+}
+.titulo {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 4rem;
+}
+
+/* Pagina inicio */
+.recetasContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+/* Card receta */
+.receta {
+  width: 19%;
+  margin: .5rem 1.5rem .5rem 1.5rem;
+  border: 2px solid #272343;
+  border-radius: 20px;
+}
+.receta img {
+  width: 100%;
+  border-radius: 17px 17px 0  0;
+}
+.receta h3 {
+  text-align: center;
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+.receta button {
+  width: 50%;
+  margin: 10px 25%;
+  padding: 5px 0;
+  background:#bae8e8;
+  border: none;
+  border-radius: 20px;
+}
+.receta button:hover {
+  background: #b3e1e1;
+}
+.receta button:active {
+  padding-top: 3px;
+  margin-top: 12px;
+}
+/* Pagina administrador */
+.administradorContainer {
+  margin: 0 2rem;
+}
+.administradorContainer hr {
+  margin-top: 3vh;
+}
+.btnSubirContainer {
+  margin-top: 1.5rem;
+
+}
+.btnSubir {
+  padding: 10px 10px;
+  background:#bae8e8;
+  border-radius: 20px;
+  border: none;
+  color: #272343;
+  text-decoration: none;
+}
+#tableContainer {
+  overflow-x:auto;
+}
+table {
+  margin: 3rem auto;
+  min-width: 90%;
+  background: #e3f6f5;
+}
+table, th {
+  border: 1px solid #272343;
+  border-collapse: collapse;
+}
+th {
+  padding: .5rem;
+}
+tbody th {
+  text-align: start;
+  font-weight: lighter;
+}
+
+/* Pagina subir receta */
+form {
+  margin: 5vh 2.5vw;
+  padding: 2.5vh 2.5vw;
+  border: 2px solid #272343;
+  border-radius: 20px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+input {
+  margin: 1.5vh 0;
+  border: none;
+  border-bottom: 2px solid #272343;
+  background: #fffffe;
+  color: grey;
+  font-size: 1.2rem;
+}
+input:focus {
+  outline:none;
+  border-color: #bae8e8;
+}
+textarea {
+  min-height: 60px;
+  margin: 1vh 0;
+  padding: .5vh 0;
+  border: none;
+  border-bottom: 2px solid #272343;
+  background: #fffffe;
+  font-size: 1.1rem;
+}
+textarea:focus {
+  outline:none;
+  border-color: #bae8e8;
+}
+.formButton{
+  width: 90%;
+  margin: 2vh 5%;
+  padding: 1vh 0;
+  background: #bae8e8;
+  border: none;
+  border-radius: 20px;
+}
+.formButton:hover {
+  background: #b3e1e1;
+}
+
+
+/* Dispositivos md */
+
+@media (min-width:769px) and (max-width:991px) {
+  #header a {
+    margin-left: 4rem;
+    font-size: 1.7rem ;
+  }
+  main {
+    margin: 0 2.5rem;
+  }
+  .titulo {
+    font-size: 3.5rem;
+  }
+  .receta {
+    width: 40%  ;
+  }
+}
+
+/* Dispositivos sm */
+
+@media (max-width:768px) {
+  #header a {
+    font-size: 1.7rem ;
+    margin-left: 2rem;
+  }
+  main {
+    margin: 2rem 0;
+  }
+  .titulo {
+    font-size: 2.5rem;
+  }
+  .receta {
+    width: 85%  ;
+  }
+}
