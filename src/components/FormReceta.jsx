@@ -20,11 +20,11 @@ const FormReceta = () => {
       console.log(respuesta)
       //Si la respuesta es correcta indicarle al usuario
       if(respuesta.status === 201) {
-        Swal.fire("Receta creado","La receta fue creada exitosamente", "success")
+        Swal.fire("Receta creada","La receta fue creada exitosamente", "success")
         //Resetear el formulario
         reset();
         //Redireccionar
-        navegacion('/administrar')
+        navegacion('/administrador')
       } else {
         Swal.fire("Ocurrio un error","La receta no pudo ser creada", "error")
       }
@@ -35,7 +35,7 @@ const FormReceta = () => {
     <div>
       <h1 className="titulo">Subir receta</h1>
       <hr />
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <label>
           Receta
           <input

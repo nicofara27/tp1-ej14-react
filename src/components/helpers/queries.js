@@ -29,3 +29,15 @@ export const consultarRecetasApi = async()=>{
         return false
     }
 }
+
+export const borrarRecetaApi = async(id)=>{
+    try {
+        const respuesta = await fetch(URL+'/'+id, {
+            method:"DELETE"
+        });
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+}

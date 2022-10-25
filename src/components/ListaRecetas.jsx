@@ -29,7 +29,7 @@ const ListaRecetas = () => {
         <h1 className="titulo">Lista de recetas</h1>
         <hr />
       <section className="recetasContainer">
-        {recetas.map((receta)=><Receta key={receta.id} receta={receta}></Receta>)}
+        {recetas.map((receta)=><Receta key={receta.id} receta={receta} setRecetas={setRecetas}></Receta>)}
       </section>
     </div>
   );
