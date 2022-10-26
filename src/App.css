@@ -176,6 +176,7 @@ textarea {
   border: none;
   border-bottom: 2px solid #272343;
   background: #fffffe;
+  color: grey;
   font-size: 1.1rem;
 }
 textarea:focus {
