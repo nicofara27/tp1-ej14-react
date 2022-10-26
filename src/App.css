@@ -212,6 +212,11 @@ textarea:focus {
   outline: none;
   border-color: #bae8e8;
 }
+label p {
+  font-weight: lighter;
+  margin-bottom: 2vh;
+  color: rgb(222, 102, 102);
+}
 .formButton {
   width: 90%;
   margin: 2vh 5%;

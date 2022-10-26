@@ -53,6 +53,7 @@ const SubirReceta = () => {
               },
             })}
           />
+          <p>{errors.nombreReceta?.message}</p>
         </label>
         <label>
           Imagen
@@ -67,6 +68,7 @@ const SubirReceta = () => {
               },
             })}
           />
+          <p>{errors.imagen?.message}</p>
         </label>
         <label>
           Ingredientes
@@ -88,6 +90,7 @@ const SubirReceta = () => {
               },
             })}
           />
+          <p>{errors.ingredientes?.message}</p>
         </label>
         <label>
           Pasos a seguir
@@ -109,6 +112,7 @@ const SubirReceta = () => {
               },
             })}
           />
+          <p>{errors.pasos?.message}</p>
         </label>
         <button className="formButton">Subir</button>
       </form>

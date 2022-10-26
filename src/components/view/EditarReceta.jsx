@@ -59,14 +59,15 @@ const EditarReceta = () => {
               required: "El nombre de la receta es obligatorio",
               minLength: {
                 value: 6,
-                message: "La cantidad minima de caracteres es 2",
+                message: "La cantidad minima de caracteres es 6",
               },
               maxLength: {
                 value: 60,
-                message: "La cantidad maxima de caracteres es 50",
+                message: "La cantidad maxima de caracteres es 60",
               },
             })}
           />
+          <p>{errors.nombreReceta?.message}</p>
         </label>
         <label>
           Imagen
@@ -81,6 +82,7 @@ const EditarReceta = () => {
               },
             })}
           />
+          <p>{errors.imagen?.message}</p>
         </label>
         <label>
           Ingredientes
@@ -102,6 +104,7 @@ const EditarReceta = () => {
               },
             })}
           />
+          <p>{errors.ingredientes?.message}</p>
         </label>
         <label>
           Pasos a seguir
@@ -123,6 +126,7 @@ const EditarReceta = () => {
               },
             })}
           />
+          <p>{errors.pasos?.message}</p>
         </label>
         <button className="formButton">Guardar</button>
       </form>
