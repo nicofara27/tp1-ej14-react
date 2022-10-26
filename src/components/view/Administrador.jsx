@@ -5,15 +5,11 @@ import RecetaAdmin from "../RecetaAdmin";
 
 const Administrador = () => {
   let [recetas, setRecetas] = useState([]);
-  console.log(recetas)
   useEffect(() => {
-    consultarRecetasApi().then(
-      (respuesta)=>{
-        setRecetas(respuesta);
-      }
-    )
-  }, [])
-  
+    consultarRecetasApi().then((respuesta) => {
+      setRecetas(respuesta);
+    });
+  }, []);
 
   return (
     <section className="administradorContainer">
@@ -21,11 +17,11 @@ const Administrador = () => {
         <h1 className="titulo">Recetas subidas</h1>
       </div>
       <hr />
-        <div className="btnSubirContainer">
+      <div className="btnSubirContainer">
         <Link className="btnSubir" to="/administrador/subir">
           Agregar
         </Link>
-        </div>
+      </div>
       <div id="tableContainer">
         <table>
           <thead>
@@ -39,8 +35,13 @@ const Administrador = () => {
             </tr>
           </thead>
           <tbody>
-          { recetas.map((receta)=> <RecetaAdmin key={receta.id} receta={receta} setRecetas={setRecetas}></RecetaAdmin> )
-          }
+            {recetas.map((receta) => (
+              <RecetaAdmin
+                key={receta.id}
+                receta={receta}
+                setRecetas={setRecetas}
+              ></RecetaAdmin>
+            ))}
           </tbody>
         </table>
       </div>

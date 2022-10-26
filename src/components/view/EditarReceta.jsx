@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
-import { consultarRcecetaApi, crearRecetaApi, editarRecetaApi, obtenerRecetaApi } from "../helpers/queries";
+import { editarRecetaApi, obtenerRecetaApi } from "../helpers/queries";
 import { useEffect } from "react";
 
 const EditarReceta = () => {
@@ -16,34 +16,28 @@ const EditarReceta = () => {
 
   const navegacion = useNavigate();
 
-  useEffect(()=>{
-    obtenerRecetaApi(id).then((respuesta)=>{
-      if(respuesta.status === 200){
-        console.log(respuesta.status)
-        setValue('nombreReceta', respuesta.dato.nombreReceta)
-        setValue('imagen', respuesta.dato.imagen)
-        setValue('ingredientes', respuesta.dato.ingredientes)
-        setValue('pasos', respuesta.dato.pasos)
+  useEffect(() => {
+    obtenerRecetaApi(id).then((respuesta) => {
+      if (respuesta.status === 200) {
+        setValue("nombreReceta", respuesta.dato.nombreReceta);
+        setValue("imagen", respuesta.dato.imagen);
+        setValue("ingredientes", respuesta.dato.ingredientes);
+        setValue("pasos", respuesta.dato.pasos);
       }
-    })
-  },[]);
+    });
+  }, []);
 
   const onSubmit = (datos) => {
-    
-    //Enviar la peticion a la API
     editarRecetaApi(id, datos).then((respuesta) => {
-        console.log(respuesta.id)
-      //Si la respuesta es correcta indicarle al usuario
       if (respuesta.status === 200) {
         Swal.fire(
           "Receta editada",
           "La receta fue actualizada exitosamente",
           "success"
         );
-        //Redireccionar
+
         navegacion("/administrador");
       } else {
-        console.log(respuesta)
         Swal.fire("Ocurrio un error", "La receta no pudo ser editada", "error");
       }
     });

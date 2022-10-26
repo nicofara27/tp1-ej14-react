@@ -8,28 +8,33 @@ const ListaRecetas = () => {
 
   useEffect(() => {
     consultarRecetasApi().then(
-      (respuesta) =>{
-        setRecetas(respuesta)
+      (respuesta) => {
+        setRecetas(respuesta);
       },
-      (reason)=>{
+      (reason) => {
         console.log(reason);
 
         Swal.fire(
-          'Ocurrio un error',
-          'Intentelo nuevamente en unos minutos',
-          'error'
-        )
+          "Ocurrio un error",
+          "Intentelo nuevamente en unos minutos",
+          "error"
+        );
       }
     );
-  }, [])
-  
+  }, []);
 
   return (
     <div>
-        <h1 className="titulo">Lista de recetas</h1>
-        <hr />
+      <h1 className="titulo">Lista de recetas</h1>
+      <hr />
       <section className="recetasContainer">
-        {recetas.map((receta)=><Receta key={receta.id} receta={receta} setRecetas={setRecetas}></Receta>)}
+        {recetas.map((receta) => (
+          <Receta
+            key={receta.id}
+            receta={receta}
+            setRecetas={setRecetas}
+          ></Receta>
+        ))}
       </section>
     </div>
   );

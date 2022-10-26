@@ -14,21 +14,19 @@ const SubirReceta = () => {
   const navegacion = useNavigate();
 
   const onSubmit = (datos) => {
-    console.log(datos);
-    //Enviar la peticion a la API
-    crearRecetaApi(datos).then((respuesta)=> {
-      console.log(respuesta)
-      //Si la respuesta es correcta indicarle al usuario
-      if(respuesta.status === 201) {
-        Swal.fire("Receta creada","La receta fue creada exitosamente", "success")
-        //Resetear el formulario
+    crearRecetaApi(datos).then((respuesta) => {
+      if (respuesta.status === 201) {
+        Swal.fire(
+          "Receta creada",
+          "La receta fue creada exitosamente",
+          "success"
+        );
         reset();
-        //Redireccionar
-        navegacion('/administrador')
+        navegacion("/administrador");
       } else {
-        Swal.fire("Ocurrio un error","La receta no pudo ser creada", "error")
+        Swal.fire("Ocurrio un error", "La receta no pudo ser creada", "error");
       }
-    })
+    });
   };
 
   return (

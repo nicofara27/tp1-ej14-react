@@ -4,35 +4,43 @@ import { borrarRecetaApi, consultarRecetasApi } from "./helpers/queries";
 
 const RecetaAdmin = ({ receta, setRecetas }) => {
   const { id, nombreReceta, imagen, ingredientes, pasos } = { ...receta };
+
   //Funciones para recortar el texto de ingredientes y pasos cuando son muy largos
   const ingr = ingredientes;
   let ingr2 = "";
   if (ingr != null && ingr.length > 100) {
-      ingr2 = ingr.slice(0, 100) + "...";
-    }else {
-        ingr2 = ingredientes;
-    }
-    const pasosRecortados = pasos;
-    let pasosRecortados2 = "";
-    if (pasosRecortados != null && pasosRecortados.length > 100) {
-        pasosRecortados2 = pasosRecortados.slice(0, 100) + "...";
-    } else {
-        pasosRecortados2 = pasos;
-    }
-
-  //Funcion para borrar receta
-  const borrarReceta= () =>{
-    borrarRecetaApi(id).then((respuesta)=>{
-        if(respuesta.status === 200) {
-            Swal.fire("Receta eliminada","La receta fue eliminada exitosamente", "success");
-            consultarRecetasApi().then((respuesta)=>{
-                setRecetas(respuesta)
-              })
-          } else {
-            Swal.fire("Ocurrio un error","Vuelva a intentar la operacion mas tarde", "error")
-          }
-        })
+    ingr2 = ingr.slice(0, 100) + "...";
+  } else {
+    ingr2 = ingredientes;
   }
+  const pasosRecortados = pasos;
+  let pasosRecortados2 = "";
+  if (pasosRecortados != null && pasosRecortados.length > 100) {
+    pasosRecortados2 = pasosRecortados.slice(0, 100) + "...";
+  } else {
+    pasosRecortados2 = pasos;
+  }
+
+  const borrarReceta = () => {
+    borrarRecetaApi(id).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire(
+          "Receta eliminada",
+          "La receta fue eliminada exitosamente",
+          "success"
+        );
+        consultarRecetasApi().then((respuesta) => {
+          setRecetas(respuesta);
+        });
+      } else {
+        Swal.fire(
+          "Ocurrio un error",
+          "Vuelva a intentar la operacion mas tarde",
+          "error"
+        );
+      }
+    });
+  };
 
   return (
     <tr>
@@ -46,7 +54,9 @@ const RecetaAdmin = ({ receta, setRecetas }) => {
           <Link className="btnEditar" to={`/administrador/editar/${id}`}>
             Editar
           </Link>
-          <button className="btnBorrar" onClick={borrarReceta}>Borrar</button>
+          <button className="btnBorrar" onClick={borrarReceta}>
+            Borrar
+          </button>
         </div>
       </td>
     </tr>
