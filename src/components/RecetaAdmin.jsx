@@ -43,7 +43,7 @@ const RecetaAdmin = ({ receta, setRecetas }) => {
       <td>{pasosRecortados2}</td>
       <td>
         <div>
-          <Link className="btnEditar" to={`/administrar/editar/${id}`}>
+          <Link className="btnEditar" to={`/administrador/editar/${id}`}>
             Editar
           </Link>
           <button className="btnBorrar" onClick={borrarReceta}>Borrar</button>
