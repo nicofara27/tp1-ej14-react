@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const Receta = ({receta}) => {
-  const {nombreReceta, imagen} = {...receta}
+  const {nombreReceta, imagen, id} = {...receta}
     return (
         <article className="receta">
           <div>
@@ -11,7 +12,7 @@ const Receta = ({receta}) => {
             />
           </div>
           <h3>{nombreReceta}</h3>
-          <button>Ver mas</button>
+          <Link className="recetaButton" to={`/detalle/${id}`}>Ver mas</Link>
         </article>
     );
 };

@@ -2,16 +2,16 @@
   "recetas": [
     {
       "nombreReceta": "Alfajores de maicena",
-      "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/369/168/products/mago1-707e9d717c8efe267e16262966124601-640-0.jpg",
-      "ingredientes": "1- asdasdasdasd\n2-asdasdasdasdas\n3- asdasdasdasd",
-      "pasos": "asdasdasdasfadzxcasdasdasdasdasd",
+      "imagen": "https://kamadoargentino.com.ar/wp-content/uploads/2020/12/CABUTIA_4_QUESOS_AL_KAMADO_ARGENTINO.jpg",
+      "ingredientes": "5 huevos\n200 cm3 de leche condensada\n2 tazas de agua\n500 gr de Azúcar\n250 cm3 de Agua\n1 cucharaditas de esencia de vainilla",
+      "pasos": "Colocar los huevos la leche condensada y la esencia de vainilla en un bowl. Batir hasta lograr la mayor cantidad de aireado posible.\nEn una sartén con fuego bajo colocar de forma progresiva el azúcar y el agua, siempre en la proporción de 2 x 1, hasta terminar la totalidad del los dos componentes y tome consistencia (pasará de un espeso «jarabe» a ir adquiriendo una tonalidad más oscura).El punto ideal del caramelo es cuando su color es claro (como la miel). Si se pone muy oscuro puede tomar un sabor amargo.\nEncender el Kamado Argentino con fuego fuerte hasta los 200C.\nColocar el caramelo sobre todo el molde para que nos haga las veces de desmoldante. Verter el contenido del bowl y colocar en baño maría en el kamado.\n\nHornear por 50 minutos a 180 C / 200 C.\n\nRetirar, dejar enfriar y desmoldar.",
       "id": 1
     },
     {
       "nombreReceta": "Alfajores",
-      "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/369/168/products/mago1-707e9d717c8efe267e16262966124601-640-0.jpg",
-      "ingredientes": "1- asdasdasdasd\n2-asdasdasdasdas\n3- asdasdasdasd",
-      "pasos": "asdasdasdasfadzxcasdasdasdasdasd",
+      "imagen": "https://kamadoargentino.com.ar/wp-content/uploads/2020/12/FLAN_AL_KAMADO_ARGENTINO.jpg",
+      "ingredientes": "6 Peras\n300 gr de azúcar\n300 gr de canela en polvo\n350 cm3 de agua\n6 ramas de canela\nMenta\n",
+      "pasos": "Pelar las peras y retirar la parte central de los carozos,  polvorear con canela y colocar a hornear a 180C por 1 hora. En caso de tener deflector o sistema de cocción utilizarlo ya que la cocción será mucho más pareja.\n\nEn un sartén colocar azúcar y el agua y generar un caramelo liviano. En caso que prefieran puede sumar unas gotas de esencia de vainilla.\n\nRetirar las peras, colocar sobre estas el almíbar y terminar con una rama de canela y una hoja de menta.",
       "id": 2
     }
   ]
