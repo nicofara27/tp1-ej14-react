@@ -53,13 +53,13 @@ const EditarReceta = () => {
           <input
             type="text"
             placeholder="Alfajores de maicena"
-            minLength={6}
+            minLength={3}
             maxLength={60}
             {...register("nombreReceta", {
               required: "El nombre de la receta es obligatorio",
               minLength: {
-                value: 6,
-                message: "La cantidad minima de caracteres es 6",
+                value: 3,
+                message: "La cantidad minima de caracteres es 3",
               },
               maxLength: {
                 value: 60,
