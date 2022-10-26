@@ -5,6 +5,10 @@
 body {
     background: #fffffe;
 }
+button {
+  cursor:pointer;
+  cursor: hand;
+}
 
 /* Navbar */
 #header {
@@ -18,7 +22,7 @@ body {
   color: black;
   text-decoration: none;
   font-size: 2rem;
-  margin-left: 7rem;
+  margin-left: 6rem;
 }
 
 /* Main */
@@ -81,11 +85,13 @@ main {
 
 }
 .btnSubir {
-  padding: 10px 10px;
-  background:#bae8e8;
+  margin-left: 2vw;
+  padding: 15px;
+  background:#82a2a2;
   border-radius: 20px;
   border: none;
-  color: #272343;
+  color: whitesmoke;
+  font-size: 1.1rem;
   text-decoration: none;
 }
 #tableContainer {
@@ -109,6 +115,7 @@ tbody th {
   font-weight: lighter;
 }
 td {
+  max-width: 30vw;
   text-overflow: ellipsis;
   overflow: hidden; 
 }
@@ -125,6 +132,7 @@ td:last-child div {
   border: none;
   color: #272343;
   text-decoration: none;
+  text-align: center;
 }
 .btnBorrar {
   padding: 10px 10px;
