@@ -99,7 +99,7 @@ const FormReceta = () => {
         3- Tercer paso"
             minLength={20}
             maxLength={1500}
-            {...register("ingredientes", {
+            {...register("pasos", {
               required: "Los pasos son obligatorios",
               minLength: {
                 value: 20,

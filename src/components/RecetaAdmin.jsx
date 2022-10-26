@@ -4,18 +4,21 @@ import { borrarRecetaApi, consultarRecetasApi } from "./helpers/queries";
 
 const RecetaAdmin = ({ receta, setRecetas }) => {
   const { id, nombreReceta, imagen, ingredientes, pasos } = { ...receta };
-
   //Funciones para recortar el texto de ingredientes y pasos cuando son muy largos
   const ingr = ingredientes;
   let ingr2 = "";
   if (ingr != null && ingr.length > 100) {
-    ingr2 = ingr.slice(0, 100) + "...";
-  }
-  const pasosRecortados = pasos;
-  let pasosRecortados2 = "";
-  if (pasosRecortados != null && pasosRecortados.length > 100) {
-    pasosRecortados2 = pasosRecortados.slice(0, 100) + "...";
-  }
+      ingr2 = ingr.slice(0, 100) + "...";
+    }else {
+        ingr2 = ingredientes;
+    }
+    const pasosRecortados = pasos;
+    let pasosRecortados2 = "";
+    if (pasosRecortados != null && pasosRecortados.length > 100) {
+        pasosRecortados2 = pasosRecortados.slice(0, 100) + "...";
+    } else {
+        pasosRecortados2 = pasos;
+    }
 
   //Funcion para borrar receta
   const borrarReceta= () =>{

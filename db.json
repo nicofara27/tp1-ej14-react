@@ -1,3 +1,11 @@
 {
-  "recetas": []
+  "recetas": [
+    {
+      "nombreReceta": "Alfajores",
+      "imagen": "https://d3ugyf2ht6aenh.cloudfront.net/stores/369/168/products/mago1-707e9d717c8efe267e16262966124601-640-0.jpg",
+      "ingredientes": "1- asdasdasdasd\n2-asdasdasdasdas\n3- asdasdasdasd",
+      "pasos": "asdasdasdasfadzxcasdasdasdasdasd",
+      "id": 1
+    }
+  ]
 }

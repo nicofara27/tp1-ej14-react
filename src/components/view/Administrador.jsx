@@ -31,10 +31,10 @@ const Administrador = () => {
           <thead>
             <tr>
               <th>Cod</th>
-              <th>Producto</th>
-              <th>Precio</th>
+              <th>Receta</th>
               <th>URL de Imagen</th>
-              <th>Categoria</th>
+              <th>Ingredientes</th>
+              <th>Pasos</th>
               <th>Opciones</th>
             </tr>
           </thead>
