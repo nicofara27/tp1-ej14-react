@@ -1,6 +1,6 @@
 # Tp1 - Blog de recetas
 
-Ejercicios numero 14 del tp1 de react.
+Ejercicios numero 14 del tp1 de react. Utilize la pagina [Kamado argentino](https://kamadoargentino.com.ar/recetas/) para sacar las imagenes
 
 # Demo
 
